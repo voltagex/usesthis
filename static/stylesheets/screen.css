@@ -15,6 +15,18 @@
   --usesthis-pink: #fe2e9a;
 }
 
+p#support {
+  background: var(--usesthis-purple);
+  border-radius: 4px;
+  padding: 4px;
+}
+
+p#support>a {
+  font-weight: bold;
+  color: #fff
+}
+
+
 a {
   color: var(--link-colour);
   text-decoration: underline;
@@ -24,7 +36,8 @@ a:hover {
   color: var(--link-hover-colour) !important;
 }
 
-article.interviewee + article.interviewee, div.e-content {
+article.interviewee+article.interviewee,
+div.e-content {
   margin-top: 30px;
 }
 
@@ -134,7 +147,8 @@ header#masthead {
   grid-row: 1;
 }
 
-img.detail, img.portrait {
+img.detail,
+img.portrait {
   border: solid 1px var(--image-border-colour);
   padding: 0;
 }
@@ -154,13 +168,14 @@ main {
   padding: 0 50px;
 }
 
-main > h2 + p {
+main>h2+p {
   margin: 10px 0 20px 0;
   padding-bottom: 20px;
   border-bottom: solid 1px var(--divider-colour);
 }
 
-main p, main ul {
+main p,
+main ul {
   line-height: 1.7em;
 }
 
@@ -268,7 +283,7 @@ ul {
   padding: 0;
 }
 
-ul + h3 {
+ul+h3 {
   margin-top: 20px;
 }
 
@@ -327,7 +342,8 @@ ul.months li:first-child:before {
     clear: left;
   }
 
-  header#masthead, main {
+  header#masthead,
+  main {
     border: 0;
     padding: 0;
   }
@@ -337,7 +353,7 @@ ul.months li:first-child:before {
     width: 100%;
   }
 
-  img.portrait  {
+  img.portrait {
     height: 100%;
     left: 0;
     position: absolute;
@@ -396,11 +412,19 @@ ul.months li:first-child:before {
     --text-colour: #ccc;
   }
 
+  @media (prefers-color-scheme: light) {
+    p#support>a {
+      font-weight: bold;
+      color: #000
+    }
+  }
+
   a {
     text-shadow: 1px 1px 1px #222;
   }
 
-  dt, :not(a) > h3 {
+  dt,
+  :not(a)>h3 {
     color: #fff;
   }
 }
